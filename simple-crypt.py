@@ -48,18 +48,16 @@ key="enckey"
 print("original:")    
 print(message)    
 encoded=encode(key, message)
-print("encoded:")
-print([encoded])
+print("encoded: " + ''.join([encoded]))
+print([encoded]);
 decoded=decode(key, encoded)
-print("decoded:")
-print([decoded])
+print("decoded: " + decoded)
+
 
 # 64 Encode
-print("urlsafe_b64encode and urlsafe_b64decode")    
+print("\n\nUrlsafe")    
 encoded=encode64(key, message)
-print("encoded:")
-print([encoded])
+print("encoded: " + encoded)
 decoded=decode64(key, encoded)
-print("decoded:")
-print([decoded])
+print("decoded: " + decoded)
 
