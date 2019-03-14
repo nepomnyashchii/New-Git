@@ -27,7 +27,6 @@ def encode64(key, string):
         encoded_c = chr(ord(string[i]) + ord(key_c) % 256)
         encoded_chars.append(encoded_c)
     encoded_string = "".join(encoded_chars)
-    #return encoded_string
     return base64.urlsafe_b64encode(encoded_string)
     
 def decode64(key, string):
@@ -41,9 +40,11 @@ def decode64(key, string):
     return (decoded_string)
 
 
-
+# Start
 message="Privet"
 key="enckey"
+
+# Simple
 print("original:")    
 print(message)    
 encoded=encode(key, message)
@@ -53,6 +54,7 @@ decoded=decode(key, encoded)
 print("decoded:")
 print([decoded])
 
+# 64 Encode
 print("urlsafe_b64encode and urlsafe_b64decode")    
 encoded=encode64(key, message)
 print("encoded:")
